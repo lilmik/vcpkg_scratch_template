@@ -13,8 +13,6 @@ int main()
 
     itas109::CSerialPort *m_SerialPort = new itas109::CSerialPort();
 
-    delete m_SerialPort;
-
     // 使用 fmt 格式化指针信息
     std::cout << fmt::format("📍 Pointer address: {:p}", static_cast<void *>(m_SerialPort)) << std::endl;
     std::cout << fmt::format("📏 Pointer size: {} bytes", sizeof(m_SerialPort)) << std::endl;
@@ -31,6 +29,8 @@ int main()
 
     std::cout << "\n📄 Pointer Information:\n"
               << pointerInfo.dump(2) << std::endl;
+
+    delete m_SerialPort;
 
     return 0;
 }

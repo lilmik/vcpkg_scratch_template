@@ -17,6 +17,7 @@ endif()
 find_package(fmt CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
 find_package(cserialport CONFIG REQUIRED)
+# find_package(Threads CONFIG REQUIRED)
 
 add_executable(HelloWorld helloworld.cpp)
 
@@ -24,6 +25,8 @@ target_link_libraries(HelloWorld PRIVATE
     fmt::fmt
     nlohmann_json::nlohmann_json
     ${CSerialPort_LIBRARY}
+    -lpthread # 
+
 )
 
 # 只有在静态构建时才添加静态链接选项
