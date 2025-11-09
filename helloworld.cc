@@ -10,6 +10,7 @@ SignalSlotDemo::SignalSlotDemo(QObject *parent)
 
 void SignalSlotDemo::onTimerTimeout()
 {
+    qDebug() << "onTimerTimeout()槽函数被触发！";
     m_counter++;
     fmt::print("\n=== 槽函数触发第 {} 次 ===\n", m_counter);
 

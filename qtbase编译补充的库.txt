@@ -9,11 +9,4 @@ export CMAKE_EXE_LINKER_FLAGS="-lstdc++fs"
 docker run -it --name qt6-build -v /opt/vcpkg:/opt/vcpkg -v /home/lianchao/ws_cpp:/ws_cpp ubuntu:24.04 /bin/bash
 
 
-apt update && apt install -y \
-  build-essential cmake git pkg-config patchelf \
-  '^libxcb.*-dev' \
-  libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev \
-  libxkbcommon-dev libxkbcommon-x11-dev libegl1-mesa-dev mesa-common-dev \
-  libfontconfig1-dev libfreetype6-dev libharfbuzz-dev libdbus-1-dev \
-  libjpeg-dev libpng-dev libzstd-dev libssl-dev libpcre2-dev \
-  libdouble-conversion-dev libbrotli-dev libicu-dev libltdl-dev '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev libegl1-mesa-dev curl zip unzip tar nano ninja-build linux-libc-dev bison flex autoconf autoconf-archive automake libtool python3-pip python3-jinja2 libarchive-dev
+apt update && apt install -y build-essential cmake git pkg-config patchelf '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev libegl1-mesa-dev mesa-common-dev libfontconfig1-dev libfreetype6-dev libharfbuzz-dev libdbus-1-dev libjpeg-dev libpng-dev libzstd-dev libssl-dev libpcre2-dev libdouble-conversion-dev libbrotli-dev libicu-dev libltdl-dev '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev libegl1-mesa-dev curl zip unzip tar nano ninja-build linux-libc-dev bison flex autoconf autoconf-archive automake libtool python3-pip python3-jinja2 libarchive-dev

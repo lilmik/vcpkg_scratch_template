@@ -8,6 +8,7 @@
 #include <nlohmann/json.hpp>
 #include <CSerialPort/SerialPort.h>
 #include <vector>
+#include <QDebug>
 
 // 必须继承 QObject + Q_OBJECT 宏（信号槽必需）
 class SignalSlotDemo : public QObject

@@ -27,7 +27,7 @@ find_package(Qt6Core CONFIG REQUIRED)
 
 add_executable(HelloWorld 
 helloworld.h
-helloworld.cpp
+helloworld.cc
 )
 
 target_link_libraries(HelloWorld PRIVATE 
