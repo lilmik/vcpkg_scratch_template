@@ -1,6 +1,9 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.16)
 
 project(HelloWorld)
+
+# 启用 Qt 元对象编译（信号槽机制必需）
+set(CMAKE_AUTOMOC ON)
 
 # 根据 BUILD_SHARED_LIBS 判断是否使用静态链接
 if(BUILD_SHARED_LIBS)
@@ -17,14 +20,21 @@ endif()
 find_package(fmt CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
 find_package(cserialport CONFIG REQUIRED)
-# find_package(Threads CONFIG REQUIRED)
 
-add_executable(HelloWorld helloworld.cpp)
+# 添加 Qt6Core 依赖
+find_package(Qt6Core CONFIG REQUIRED)
+
+
+add_executable(HelloWorld 
+helloworld.h
+helloworld.cpp
+)
 
 target_link_libraries(HelloWorld PRIVATE 
     fmt::fmt
     nlohmann_json::nlohmann_json
     ${CSerialPort_LIBRARY}
+    Qt6::Core  # 链接 Qt6Core
     -lpthread # 
 
 )
